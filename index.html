@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet index" href="css/index.css">
+    <link rel="stylesheet header" href="css/header.css">
+    <link rel="stylesheet table" href="css/table.css">
+
+    <title>WEB lab1</title>
+    <!-- отложенная загрузка библиотеки jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+</head>
+<body>
+<header class="header">
+    <a href="https://github.com/fsaidov11">
+        <img alt="Github" src="img/img.png">
+    </a>
+    <div>
+            <span>
+                <a href="https://t.me/fsaidov11">Faridun Saidov</a>
+                <a href="#">P3224</a>
+            </span>
+        <span>
+                Variant
+                <a href="https://se.ifmo.ru/courses/web#labs">87654</a>
+            </span>
+    </div>
+</header>
+<table class="all-tables">
+    <tr class="graph-data">
+        <td>
+            <svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+                <!-- Стерлки и оси -->
+                <line stroke="black" x1="0" x2="300" y1="150" y2="150"></line>
+                <line stroke="black" x1="150" x2="150" y1="0" y2="300"></line>
+                <polygon fill="gray" points="150,0 144,15 150,12 156,15" stroke="black"></polygon>
+                <polygon fill="gray" points="300,150 285,156 288,150 285,144" stroke="black"></polygon>
+
+                <!-- Деления -->
+                <line stroke="black" x1="200" x2="200" y1="155" y2="145"></line>
+                <line stroke="black" x1="250" x2="250" y1="155" y2="145"></line>
+
+                <line stroke="black" x1="50" x2="50" y1="155" y2="145"></line>
+                <line stroke="black" x1="100" x2="100" y1="155" y2="145"></line>
+
+                <line stroke="black" x1="145" x2="155" y1="100" y2="100"></line>
+                <line stroke="black" x1="145" x2="155" y1="50" y2="50"></line>
+
+                <line stroke="black" x1="145" x2="155" y1="200" y2="200"></line>
+                <line stroke="black" x1="145" x2="155" y1="250" y2="250"></line>
+
+                <!-- Подписи к делениям и осям -->
+                <text fill="black" x="195" y="140">R/2</text>
+                <text fill="black" x="250" y="140">R</text>
+
+                <text fill="black" x="40" y="140">-R</text>
+                <text fill="black" x="85" y="140">-R/2</text>
+
+                <text fill="black" x="160" y="55">R</text>
+                <text fill="black" x="160" y="105">R/2</text>
+
+                <text fill="black" x="160" y="204">-R/2</text>
+                <text fill="black" x="160" y="255">-R</text>
+
+                <text fill="black" x="285" y="140">X</text>
+                <text fill="black" x="160" y="15">Y</text>
+
+                <!--Треугольник-->
+                <polygon fill="green"
+                         fill-opacity="0.2"
+                         stroke="green"
+                         points="150,150 150,250 200,150"></polygon>
+
+                <!--Прямоугольник-->
+                <polygon fill="blue"
+                         fill-opacity="0.2"
+                         stroke="blue"
+                         points="150,150 100,150 100,250 150,250"></polygon>
+
+                <!--Четверть круга-->
+                <path fill="orange"
+                      fill-opacity="0.2"
+                      stroke="orange"
+                      d="M 100,150 A 50,50 0 0 1 150,100 L 150,150 100,150"></path>
+
+                <!-- Точка на графике -->
+                <circle id="point" r="4" cx="150" cy="150" fill="red" stroke="white" visibility="hidden"/>
+
+            </svg>
+        </td>
+        <td>
+            <form id="coordinates-form">
+                <div class="x-radios">
+                    X:
+                    <label>
+                        -3
+                        <input class="x-radio" type="radio" name="x" value="-3">
+                    </label>
+                    <label>
+                        -2
+                        <input class="x-radio" type="radio" name="x" value="-2">
+                    </label>
+                    <label>
+                        -1
+                        <input class="x-radio" type="radio" name="x" value="-1">
+                    </label>
+                    <label>
+                        0
+                        <input class="x-radio" type="radio" name="x" value="0" checked>
+                    </label>
+                    <label>
+                        1
+                        <input class="x-radio" type="radio" name="x" value="1">
+                    </label>
+                    <label>
+                        2
+                        <input class="x-radio" type="radio" name="x" value="2">
+                    </label>
+                    <label>
+                        3
+                        <input class="x-radio" type="radio" name="x" value="3">
+                    </label>
+                    <label>
+                        4
+                        <input class="x-radio" type="radio" name="x" value="4">
+                    </label>
+                    <label>
+                        5
+                        <input class="x-radio" type="radio" name="x" value="5">
+                    </label>
+                </div>
+                <div class="Y-text" id="Y">
+                    <label>
+                        Y:
+                        <input id="Y-text" class="Y-text-input" type="text" name="y" placeholder="Y &#8712; (-5; 3)"
+                               maxlength="10" required/>
+                    </label>
+                </div>
+                <div class="R-text" id="R">
+                    <label>R:
+                        <input id="R-text" class="R-text-input" type="text" name="r" placeholder="[1; 5]" maxlength="10"
+                               required/>
+                    </label>
+                </div>
+                <button id="submit-button" type="submit">Send</button>
+                <button id="clear-button" type="reset">Clear table</button>
+            </form>
+        </td>
+    </tr>
+</table>
+<table id="check" class="table-check">
+    <tr class="table-header">
+        <th scope="col">X</th>
+        <th scope="col">Y</th>
+        <th scope="col">R</th>
+        <th scope="col">Current time</th>
+        <th scope="col">Execution time</th>
+        <th scope="col">Result</th>
+    </tr>
+</table>
+</body>
+</html>

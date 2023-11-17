@@ -1,0 +1,58 @@
+.all-tables {
+    padding: 20px;
+    display: table;
+    text-align: center;
+    margin: 30px auto auto;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px 5px #2c3965;
+}
+
+.graph-data td > svg {
+    padding: 15px;
+    border-radius: 20%;
+    background-color: white;
+    box-shadow: 0 0 5px 0 #2c3965;
+}
+
+.graph-data td > form {
+    margin-left: 50px;
+    border-radius: 40px;
+    background-color: rgba(200, 200, 800);
+    padding: 25px 25px 20px 25px;
+}
+
+.table-check {
+    color: white;
+    max-width: 80%;
+    margin: 20px auto;
+    border: 1px solid black;
+    background-color: #2c3965;
+}
+
+.table-header > th {
+    padding: 20px;
+    font-size: 20px;
+    font-weight: lighter;
+}
+
+.table-row > td {
+    font-size: 20px;
+    text-align: center;
+    font-weight: lighter;
+}
+
+.table-row:nth-of-type(odd) {
+    margin: 0;
+    background-color: #2c3965;
+}
+
+.x-checkboxes::first-letter {
+    font-size: 20px;
+    font-weight: bold;
+    color: rebeccapurple;
+}
+
+#coordinates-form label > input {
+    margin: 5px;
+    text-align: center;
+}
