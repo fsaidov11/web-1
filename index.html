@@ -13,7 +13,7 @@
 </head>
 <body>
 <header class="header">
-    <a href="https://github.com/fsaidov11">
+    <a href="https://github.com/fsaidov11/web-1">
         <img alt="Github" src="img/img.png">
     </a>
     <div>
@@ -93,54 +93,73 @@
             <form id="coordinates-form">
                 <div class="x-radios">
                     X:
+                    <br>
                     <label>
                         -3
-                        <input class="x-radio" type="radio" name="x" value="-3">
+                        <input class="x-radio" type="radio" name="x" id="x-3" value="-3">
                     </label>
                     <label>
                         -2
-                        <input class="x-radio" type="radio" name="x" value="-2">
+                        <input class="x-radio" type="radio" name="x" id="x-2" value="-2">
                     </label>
                     <label>
                         -1
-                        <input class="x-radio" type="radio" name="x" value="-1">
+                        <input class="x-radio" type="radio" name="x" id="x-1" value="-1">
                     </label>
                     <label>
                         0
-                        <input class="x-radio" type="radio" name="x" value="0" checked>
+                        <input class="x-radio" type="radio" name="x" id="x0" value="0" checked>
                     </label>
                     <label>
                         1
-                        <input class="x-radio" type="radio" name="x" value="1">
+                        <input class="x-radio" type="radio" name="x" id="x1" value="1">
                     </label>
                     <label>
                         2
-                        <input class="x-radio" type="radio" name="x" value="2">
+                        <input class="x-radio" type="radio" name="x" id="x2" value="2">
                     </label>
                     <label>
                         3
-                        <input class="x-radio" type="radio" name="x" value="3">
+                        <input class="x-radio" type="radio" name="x" id="x3" value="3">
                     </label>
                     <label>
                         4
-                        <input class="x-radio" type="radio" name="x" value="4">
+                        <input class="x-radio" type="radio" name="x" id="x4" value="4">
                     </label>
                     <label>
                         5
-                        <input class="x-radio" type="radio" name="x" value="5">
+                        <input class="x-radio" type="radio" name="x" id="x5" value="5">
                     </label>
                 </div>
                 <div class="Y-text" id="Y">
                     <label>
                         Y:
+                        <br>
                         <input id="Y-text" class="Y-text-input" type="text" name="y" placeholder="Y &#8712; (-5; 3)"
                                maxlength="10" required/>
                     </label>
                 </div>
                 <div class="R-text" id="R">
-                    <label>R:
-                        <input id="R-text" class="R-text-input" type="text" name="r" placeholder="[1; 5]" maxlength="10"
-                               required/>
+                    R:<br>
+                    <label>
+                        1
+                        <input type="checkbox" name="r1" id="r1">
+                    </label>
+                    <label>
+                        2
+                        <input type="checkbox" name="r2" id="r2">
+                    </label>
+                    <label>
+                        3
+                        <input type="checkbox" name="r3" id="r3">
+                    </label>
+                    <label>
+                        4
+                        <input type="checkbox" name="r4" id="r4">
+                    </label>
+                    <label>
+                        5
+                        <input type="checkbox" name="r5" id="r5">
                     </label>
                 </div>
                 <button id="submit-button" type="submit">Send</button>
